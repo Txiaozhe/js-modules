@@ -1,5 +1,5 @@
 {
-  "name": "se-test",
+  "name": "js-modules",
   "version": "0.0.1",
   "dependencies": {
     "bluebird": "^3.5.1",
