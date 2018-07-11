@@ -17,9 +17,13 @@ const EventEmitter = require('events');
 const emitter = new EventEmitter();
 
 emitter.on('remote', async remote => {
-  await remote.plus(3);
-  const c = await remote.counter();
-  console.log('result ---> ', c);
+  try {
+    const p = await remote.plus(3);
+    const c = await remote.counter();
+    console.log('result ---> ', p, c);
+  } catch (e) {
+    console.log(e);
+  }
 });
 
 let remote = {};
@@ -34,12 +38,15 @@ server.on('connection', client => {
             enumerable: true,
             value: bluebird.promisify((...args) => {
               console.log('request...', method);
-              const cb = args.pop();
-              callback = cb;
+              callback = args.pop();
               client.sendMessage({
                 type: 'request',
                 method,
                 args
+              }, err => {
+                if (err) {
+                  callback && callback(err);
+                }
               });
             })
           });
