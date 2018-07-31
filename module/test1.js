@@ -1,5 +1,6 @@
-const fun = function(params) {
-    console.log('test1');
-}
+const EventEmitter = require('events');
+module.exports = new EventEmitter();
 
-module.exports = fun;
+setTimeout(() => {
+    module.exports.emit('ready');
+}, 2000);

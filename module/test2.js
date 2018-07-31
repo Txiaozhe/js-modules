@@ -1,5 +1,7 @@
-const fun = function(params) {
-    console.log('test2');
+exports.test1 = function () {
+    console.log('hello1');
 }
 
-module.exports = fun;
+exports.test2 = function () {
+    console.log('hello2');
+}
