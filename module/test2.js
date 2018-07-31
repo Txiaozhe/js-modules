@@ -5,3 +5,7 @@ exports.test1 = function () {
 exports.test2 = function () {
     console.log('hello2');
 }
+
+function test3() {
+    console.log('ddd');
+}
