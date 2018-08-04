@@ -26,5 +26,11 @@
     "tcharts.js": "^0.0.4",
     "urlencode": "^1.1.0",
     "ws": "^5.0.0"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0"
   }
 }
