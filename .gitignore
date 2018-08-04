@@ -63,4 +63,3 @@ typings/
 .idea
 .DS_Store
 .vscode
-native/deps
