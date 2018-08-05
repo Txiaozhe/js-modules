@@ -42,7 +42,7 @@ Local<Array> GetList(Isolate* isolate) {
     // 得到data 数组
     Local<Array> data = Local<Array>::Cast(ret->ToObject()->Get(String::NewFromUtf8(isolate, "data")) -> ToObject());
 
-    printf("fetching %s for %s ...ok \n ", "https://cnodejs.org/api/v1/topics", "list");
+    printf("1、fetching %s for %s ...ok \n ", "https://cnodejs.org/api/v1/topics", "list");
 
     return scope.Escape(data);
 }
@@ -57,12 +57,12 @@ Local<Object> GetTopic(Isolate *isolate, const char* id, const char* usage) {
     strcat(url, "https://cnodejs.org/api/v1/topic/");
     strcat(url, id);
 
-    printf("fetching %s for %s...", url, usage);
+    printf("2、fetching %s for %s...", url, usage);
 
     // 访问cnodejs api
     char* content = minihttp::Download(url);
     if(0 == content) {
-        printf("failed\n");
+        printf("3、failed\n");
         return Local<Object>();
     }
 
@@ -71,14 +71,14 @@ Local<Object> GetTopic(Isolate *isolate, const char* id, const char* usage) {
     free(content);
 
     if(ret->ToObject()->Get(String::NewFromUtf8(isolate, "success"))->ToBoolean()->IsFalse()) {
-        printf("failed\n");
+        printf("4、failed\n");
         return Local<Object>();
     }
 
     // 得到data数据
     Local<Object> data = ret->ToObject()->Get(String::NewFromUtf8(isolate, "data"))->ToObject();
 
-    printf("ok\n");
+    printf("5、ok\n");
     return scope.Escape(data);
 }
 
