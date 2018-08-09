@@ -21,6 +21,7 @@
     "nodemailer": "^4.6.4",
     "promise-request": "^0.1.2",
     "request": "^2.85.0",
+    "snappy": "^6.0.4",
     "superagent": "^3.8.2",
     "sy-node-utils": "^0.1.5",
     "tcharts.js": "^0.0.4",
