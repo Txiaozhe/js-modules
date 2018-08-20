@@ -22,6 +22,12 @@ exports.todo = (state = initState, action) => {
                 count: state.count - action.count
             })
         }
+        case 'ASYNC_TODO': {
+            console.log('ASYNC_TODO', state, action);
+            return Object.assign({}, {
+                count: action.count
+            })
+        }
         default: {
             return state;
         }

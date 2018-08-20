@@ -23,6 +23,8 @@
     "nodemailer": "^4.6.4",
     "promise-request": "^0.1.2",
     "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
     "request": "^2.85.0",
     "shelljs": "^0.8.2",
     "snappy": "^6.0.4",
