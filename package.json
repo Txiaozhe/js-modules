@@ -2,11 +2,13 @@
   "name": "js-modules",
   "version": "0.0.1",
   "dependencies": {
+    "@grpc/proto-loader": "^0.3.0",
     "bluebird": "^3.5.1",
     "body-parser": "^1.18.2",
     "cheerio": "^1.0.0-rc.2",
     "elasticsearch": "^13.3.1",
     "express": "^4.16.2",
+    "grpc": "^1.14.1",
     "htmlparser": "^1.7.7",
     "json-socket": "^0.3.0",
     "kafka-node": "^2.2.3",
