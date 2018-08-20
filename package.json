@@ -22,6 +22,7 @@
     "nodejieba": "^2.2.6",
     "nodemailer": "^4.6.4",
     "promise-request": "^0.1.2",
+    "redux": "^4.0.0",
     "request": "^2.85.0",
     "shelljs": "^0.8.2",
     "snappy": "^6.0.4",
