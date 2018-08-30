@@ -46,7 +46,7 @@ class BinaryObserver extends Observer {
     }
 
     update() {
-        console.log("Binary String: ", this.subject.getState().toString(2)); 
+        console.log("Binary String: ", this.subject.getState().toString(2));
     }
 }
 
@@ -58,7 +58,7 @@ class HexObserver extends Observer {
     }
 
     update() {
-        console.log("Hex String: ", this.subject.getState().toString(16)); 
+        console.log("Hex String: ", this.subject.getState().toString(16));
     }
 }
 
