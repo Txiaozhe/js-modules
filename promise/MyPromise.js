@@ -12,7 +12,7 @@ const state = {
 
 class MyPromise {
     constructor(handler) {
-        if (!isFunction) {
+        if (!isFunction(handler)) {
             throw 'handler must be a function'
         }
 
