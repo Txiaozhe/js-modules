@@ -7,7 +7,6 @@ const mw = [
     (ctx, next) => {
         console.log('fn2 ==> 1');
         next();
-        return;
         console.log('fn2 ==> 2');
     },
     (ctx, next) => {
@@ -18,12 +17,19 @@ const mw = [
 ];
 
 let index = 0;
-function compose(m) {
-    m[index]();
-    index++;
-    if (index < m.length) {
-        compose(m);
+function compose(mw) {
+    let index = 0;
+    let fn;
+    return function run(context) {
+        fn = mw[index];
+        return Promise.resolve(fn(context, function next() {
+            if (++index < mw.length) {
+                fn = mw[index];
+                run();
+            }
+        }));
     }
 }
 
-compose(mw);
+const res = compose(mw);
+res()
