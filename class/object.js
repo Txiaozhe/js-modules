@@ -5,18 +5,32 @@
 
 // console.log(obj);
 
-const obj = {
-    name: 'hello',
-    say: function () {
-        return this.name;
-    }
+// const obj = {
+//     name: 'hello',
+//     say: function () {
+//         return this.name;
+//     }
+// }
+
+// class Test {
+//     test() {
+//         console.log(obj.say());
+//     }
+// }
+
+// const t = new Test();
+// t.test()
+
+const obj2 = {
+    a: 1,
+    b: 2,
+    c: 3
 }
 
-class Test {
-    test() {
-        console.log(obj.say());
-    }
+for(let k in obj2) {
+    console.log(k)
 }
 
-const t = new Test();
-t.test()
+for(let v of obj2) {
+    console.log(v)
+}
