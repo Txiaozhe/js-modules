@@ -1,8 +1,9 @@
 const nunjucks = require('nunjucks');
 
-// nunjucks.configure('views', { autoescape: true });
-// nunjucks.render('index.html', { foo: 'bar' });
+nunjucks.configure('nj', { autoescape: true });
+const str1 = nunjucks.render('index.nj', { foo: 'bar' });
+console.log(str1);
 
 nunjucks.configure({ autoescape: true });
-const str = nunjucks.renderString('Hello {{ username }}', { username: 'James' });
-console.log(str);
+const str2 = nunjucks.renderString('Hello {{ username }}', { username: 'James' });
+console.log(str2);
