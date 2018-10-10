@@ -1,0 +1,12 @@
+# serverless.yml
+
+service: bi-daily-reports
+
+package:
+  exclude:
+    - docs/**
+    - .git/**
+    - sls_config/**
+    - .bi-deploy/**
+    - .abcc-deploy/**
+    - serverless.yml
