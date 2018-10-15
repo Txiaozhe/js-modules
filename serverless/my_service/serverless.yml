@@ -27,3 +27,4 @@ functions:
 # https://github.com/serverless/plugins
 plugins:
   - serverless-openwhisk
+  - serverless-mocha-plugin

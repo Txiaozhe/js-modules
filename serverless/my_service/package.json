@@ -8,6 +8,7 @@
     "openwhisk"
   ],
   "devDependencies": {
+    "serverless-mocha-plugin": "^1.9.0",
     "serverless-openwhisk": ">=0.13.0"
   }
 }
