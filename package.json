@@ -38,6 +38,7 @@
     "superagent": "^3.8.2",
     "sy-node-utils": "^0.1.5",
     "tcharts.js": "^0.0.4",
+    "ua-parser": "^0.3.5",
     "urlencode": "^1.1.0",
     "voca": "^1.4.0",
     "ws": "^5.0.0",
