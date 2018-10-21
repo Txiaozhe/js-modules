@@ -1,3 +1,3 @@
 const callback = require('./build/Release/callback.node');
 
-callback.runCallback((() => console.log('ddd')));
+callback.runCallback(() => console.log('ddd'));
