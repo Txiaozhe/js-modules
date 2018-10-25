@@ -16,7 +16,6 @@ const mw = [
     }
 ];
 
-let index = 0;
 function compose(mw) {
     let index = 0;
     let fn;
