@@ -15,5 +15,6 @@ http.createServer(function (req, res) {
 }).listen(8079)
 
 function init (asyncId, type, triggerId) {
+    // 不能用console.log，会导致无限循环
     fs.writeSync(1, `${type} \n`)
 }
