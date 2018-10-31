@@ -12,7 +12,7 @@ asyncHook.enable()
 
 http.createServer(function (req, res) {
   res.end('hello qts')
-}).listen(8079)
+}).listen(8079);
 
 function init (asyncId, type, triggerId) {
     // 不能用console.log，会导致无限循环
