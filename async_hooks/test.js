@@ -7,8 +7,8 @@ var fs = require('fs');
 var hooks = {
   init: init
 }
-var asyncHook = asyncHooks.createHook(hooks)
-asyncHook.enable()
+var asyncHook = asyncHooks.createHook(hooks);
+asyncHook.enable();
 
 http.createServer(function (req, res) {
   res.end('hello qts')
@@ -16,5 +16,5 @@ http.createServer(function (req, res) {
 
 function init (asyncId, type, triggerId) {
     // 不能用console.log，会导致无限循环
-    fs.writeSync(1, `${type} \n`)
+    fs.writeSync(1, `${type} \n`);
 }
