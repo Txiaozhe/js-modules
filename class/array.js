@@ -49,10 +49,9 @@
 // console.log('a: ', a);
 
 // trim test
-function trimAreaAndChannel(br, source, cb) {
-  let other = {};
+function trimAreaAndChannel(br, source, other, cb) {
   source.slice(br).forEach(o => {
-    other = cb(o);
+    other = cb(other, o);
   });
 
   const res = source.slice(0, br);
@@ -94,12 +93,12 @@ const other = {
   "trade_volume": 1
 };
 
-const r = trimAreaAndChannel(3, source, (oth) => {
+const r = trimAreaAndChannel(2, source, other, (oth, o) => {
   return {
     "area": "其他",
-    "users": other.users + oth.users,
-    "valuable_user": other.valuable_user + oth.valuable_user,
-    "trade_volume": other.trade_volume + oth.trade_volume
+    "users": oth.users + o.users,
+    "valuable_user": oth.valuable_user + o.valuable_user,
+    "trade_volume": oth.trade_volume + o.trade_volume
   }
 });
 
