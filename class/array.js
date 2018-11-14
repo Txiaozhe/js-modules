@@ -35,14 +35,72 @@
 // console.log(arr);
 // console.log(arr.hasOwnProperty(1));
 
-const a = [1, 2, 3];
-const b = [4, 5, 6];
+// 参数传递 or 值传递
+// const a = [1, 2, 3];
+// const b = [4, 5, 6];
 
-const c = [].concat(a);
-c.push(7)
-console.log('c: ', c);
-console.log('a: ', a);
+// const c = [].concat(a);
+// c.push(7)
+// console.log('c: ', c);
+// console.log('a: ', a);
 
-const d = a.slice(2);
-console.log('d: ', d);
-console.log('a: ', a);
+// const d = a.slice(2);
+// console.log('d: ', d);
+// console.log('a: ', a);
+
+// trim test
+function trimAreaAndChannel(br, source, cb) {
+  let other = {};
+  source.slice(br).forEach(o => {
+    other = cb(o);
+  });
+
+  const res = source.slice(0, br);
+  res.push(other);
+  return res;
+};
+
+const source = [
+  {
+    "area": "美国",
+    "users": 85,
+    "valuable_user": 4,
+    "trade_volume": 50
+  },
+  {
+    "area": "中国",
+    "users": 37,
+    "valuable_user": 0,
+    "trade_volume": 0
+  },
+  {
+    "area": "日本",
+    "users": 28,
+    "valuable_user": 1,
+    "trade_volume": 57128.840000000084
+  },
+  {
+    "area": "韩国",
+    "users": 15,
+    "valuable_user": 3,
+    "trade_volume": 2
+  }
+];
+
+const other = {
+  "area": "其他",
+  "users": 13,
+  "valuable_user": 1,
+  "trade_volume": 1
+};
+
+const r = trimAreaAndChannel(3, source, (oth) => {
+  return {
+    "area": "其他",
+    "users": other.users + oth.users,
+    "valuable_user": other.valuable_user + oth.valuable_user,
+    "trade_volume": other.trade_volume + oth.trade_volume
+  }
+});
+
+console.log(r);
