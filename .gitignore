@@ -65,3 +65,5 @@ typings/
 .vscode
 statics
 snappy/test.snappy
+
+stream/optimize/big.file
