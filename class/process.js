@@ -14,3 +14,6 @@ setTimeout(() => {
 
   console.log(`Benchmark took ${diff[0] * NS_PER_SEC + diff[1]} nanoseconds`);
 }, 1000);
+
+const os = process.binding('os');
+console.log(os);
