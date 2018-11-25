@@ -31,6 +31,4 @@ for(let k in obj2) {
     console.log(k)
 }
 
-for(let v of obj2) {
-    console.log(v)
-}
+console.log(Object.getOwnPropertySymbols(obj2));
