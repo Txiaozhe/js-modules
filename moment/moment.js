@@ -82,5 +82,14 @@ const moment = require('moment');
 // console.log(parseInt(100));
 
 // console.log(moment().unix() - moment('1526899537000').unix())
-console.log(moment(Number(1531794771) * 1000).format('YYYY-MM-DD HH:mm:ss'));
-console.log(moment('2018.08.15').unix()) // error
+// console.log(moment(Number(1531794771) * 1000).format('YYYY-MM-DD HH:mm:ss'));
+// console.log(moment('2018.08.15').unix()) // error
+
+let today = new Date();
+      today = moment(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()} 00:00:00`).unix() * 1000;
+console.log(today);
+
+let date = moment(Number(1543248000000));
+date = moment(`${date.year()}-${date.month()}-${date.date()} 00:00:00`).unix() * 1000;
+
+console.log(date);
