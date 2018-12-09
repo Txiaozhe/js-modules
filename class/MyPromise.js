@@ -1,5 +1,5 @@
 const state = {
-  PENDDING: 'PENDDING',
+  PENDING: 'PENDING',
   FULFILLED: 'FULFILLED',
   REJECTED: 'REJECTED'
 };
