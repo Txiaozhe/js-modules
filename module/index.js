@@ -7,3 +7,5 @@ fun1.on('ready', () => console.log('module ready'));
 console.log(module);
 test1();
 test2();
+
+console.log(require.resolve('./index'));
