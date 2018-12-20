@@ -17,3 +17,5 @@ setTimeout(() => {
 
 const os = process.binding('os');
 console.log(os);
+
+console.log('cwd: ', process.cwd());
