@@ -93,3 +93,10 @@ let date = moment(Number(1543248000000));
 date = moment(`${date.year()}-${date.month()}-${date.date()} 00:00:00`).unix() * 1000;
 
 console.log(date);
+
+console.log(moment().utcOffset(8).startOf('day') * 1);
+
+
+console.log(moment.duration().days());
+
+console.log(moment('2018-09-01').utcOffset(8).subtract(1, 'day').format('YYYY-MM-DD'));
