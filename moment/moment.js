@@ -100,3 +100,5 @@ console.log(moment().utcOffset(8).startOf('day') * 1);
 console.log(moment.duration().days());
 
 console.log(moment('2018-09-01').utcOffset(8).subtract(1, 'day').format('YYYY-MM-DD'));
+
+console.log(moment(date).utcOffset(8).startOf('day') * 1);
