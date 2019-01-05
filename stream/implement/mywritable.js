@@ -7,4 +7,5 @@ const mywritable = new Writable({
   }
 });
 
+mywritable.write(null);
 process.stdin.pipe(mywritable);

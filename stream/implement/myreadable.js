@@ -1,14 +1,14 @@
 const {Readable} = require('stream');
 
 const inStream = new Readable({
-  read() {
-
-  }
+  objectMode: true
 });
 
-inStream.push('aaaaaaaa');
-inStream.push('bbbbbbbb');
+inStream.push('aaaaaaaa\n');
+inStream.push('bbbbbbbb\n');
 
 inStream.push(null);
+
+console.log(inStream.read());
 
 inStream.pipe(process.stdout);

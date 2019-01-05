@@ -89,8 +89,8 @@ let today = new Date();
       today = moment(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()} 00:00:00`).unix() * 1000;
 console.log(today);
 
-let date = moment(Number(1543248000000));
-date = moment(`${date.year()}-${date.month()}-${date.date()} 00:00:00`).unix() * 1000;
+let date = moment(Number(1543248100111));
+// date = moment(`${date.year()}-${date.month()}-${date.date()} 00:00:00`).unix() * 1000;
 
 console.log(date);
 
@@ -101,4 +101,5 @@ console.log(moment.duration().days());
 
 console.log(moment('2018-09-01').utcOffset(8).subtract(1, 'day').format('YYYY-MM-DD'));
 
-console.log(moment(date).utcOffset(8).startOf('day') * 1);
+console.log('today start: ', moment(new Date()).utcOffset(8).startOf('day') * 1);
+console.log(new Date());
