@@ -10,9 +10,9 @@ const mywritable = new Writable({
   objectMode: true
 });
 
-const uint8arr = new Uint8Array();
+const uint8arr = new Uint8Array(2);
 
-console.log(uint8arr, uint8arr.toString());
+console.log(Object.prototype.toString.call(uint8arr) === Object.prototype.toString.call(uint8arr.slice()));
 console.log(Stream._isUint8Array(uint8arr));
 
 mywritable.write({a: 1});
