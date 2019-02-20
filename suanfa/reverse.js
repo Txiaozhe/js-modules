@@ -4,6 +4,10 @@ const assert = require('assert');
 
 // input: 'abc bcd eof', print: 'cba dcb foe'
 function reverseWords(str) {
+  if (!str) {
+    return '';
+  }
+
   const r = [];
   for (const s of str.split(' ')) {
     r.push(reve(s));
