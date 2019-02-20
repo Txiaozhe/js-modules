@@ -26,7 +26,7 @@ function reve(str) {
   return s;
 }
 
-// better
+// more concise
 function reverseWords1(str) {
   return str.split(' ').map(function(word){
     return word.split('').reverse().join('');
