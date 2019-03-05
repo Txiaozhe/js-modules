@@ -21,7 +21,7 @@
     "json-socket": "^0.3.0",
     "kafka-node": "^2.2.3",
     "konsole.table": "^0.1.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.11",
     "method": "^2.0.0",
     "mocha": "^5.0.0",
     "moment": "^2.19.2",
