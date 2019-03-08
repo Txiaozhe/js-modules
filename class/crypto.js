@@ -1,8 +1,11 @@
-var crypto=require('crypto');
+'use strict';
 
-var md5=crypto.createHash("md5");
-var str = md5.update("000000").digest('hex');
+const crypto = require('crypto');
+
+var md5 = crypto.createHash('SHA256');
+var str = md5.update('000000').digest('hex');
 console.log(str);
 
-const arr = new Array(5);
-console.log(arr[1]);
+const sign = crypto.createSign('SHA256');
+sign.update('000000');
+console.log(sign.sign(require('/Users/jimtang/.ssh/id_rsa'), 'hex'));
