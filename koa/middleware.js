@@ -31,5 +31,19 @@ function compose(mw) {
     }
 }
 
-const run = compose(mw);
+function compose2(mws) {
+    let index = 0,
+    mw = mws[index];
+
+    return async function _run(ctx) {
+        return await mw(ctx, function() {
+            if (mws[++index]) {
+                mw = mws[index];
+                _run(ctx);
+            }
+        });
+    }
+}
+
+const run = compose2(mw);
 run('ee');
