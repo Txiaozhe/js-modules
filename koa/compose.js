@@ -26,22 +26,23 @@ function compose(middleware) {
 }
 
 const fns = [
-    (ctx, next) => {
+    async (ctx, next) => {
         console.log('fn1 ==> 1');
-        next();
+        await next();
         console.log('fn1 ==> 2');
     },
-    (ctx, next) => {
+    async (ctx, next) => {
         console.log('fn2 ==> 1');
-        next();
-        return;
+        await next();
         console.log('fn2 ==> 2');
     },
-    (ctx, next) => {
+    async (ctx, next) => {
         console.log('fn3 ==> 1');
-        next();
+        return;
         console.log('fn3 ==> 2');
     }
 ]
 const res = compose(fns);
-console.log(res())
+res({}, () => {})
+.then(r => console.log(r))
+.catch(e => console.log(e))

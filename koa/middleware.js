@@ -20,14 +20,14 @@ const mw = [
 
 function compose(mw) {
     let index = 0;
-    let fn = mw[index];
-    return function run(context) {
-        return Promise.resolve(fn(context, () => { // next
+    let _fn = mw[index];
+    return async function _run(context) {
+        return await _fn(context, () => { // next
             if (++index < mw.length) {
-                fn = mw[index];
-                run(context);
+                _fn = mw[index];
+                _run(context);
             }
-        }));
+        });
     }
 }
 
