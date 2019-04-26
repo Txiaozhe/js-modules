@@ -41,9 +41,9 @@ dhU2Sz3Q60DwJEL1VenQHiVYlWWtqXBThe9ggqRPnCfsCRTP8qifKkjk45zWPcpN
 
 const sign = crypto.createSign('SHA256');
 sign.update('000000');
-console.log(sign.sign(private_key, 'hex'));
+console.log(sign.sign(private_key, 'base64'));
 
-const signature = 'a62fd1eee3d41a6d5e6f863c8a69aa45b0db0a0878358b43aa5b2e7a157c3328c79f5592208e9831bdb0d8965a7aed35e02fdb567971045405596f7de11259531ca1bd631f3fc373b96ca9b8177cedb6f1f5795c3ce22db6bd4719d12595251fb67c56334faea42c92d883e60f700f942473c8df1f3c97f32fda2dd311e87417'
-const verify = crypto.createVerify('SHA256');
-verify.update('000000');
-console.log(verify.verify(public_key, signature, 'hex'));
+// const signature = 'a62fd1eee3d41a6d5e6f863c8a69aa45b0db0a0878358b43aa5b2e7a157c3328c79f5592208e9831bdb0d8965a7aed35e02fdb567971045405596f7de11259531ca1bd631f3fc373b96ca9b8177cedb6f1f5795c3ce22db6bd4719d12595251fb67c56334faea42c92d883e60f700f942473c8df1f3c97f32fda2dd311e87417'
+// const verify = crypto.createVerify('SHA256');
+// verify.update('000000');
+// console.log(verify.verify(public_key, signature, 'hex'));

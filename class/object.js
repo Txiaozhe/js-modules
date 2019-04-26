@@ -32,3 +32,15 @@ for(let k in obj2) {
 }
 
 console.log(Object.getOwnPropertySymbols(obj2));
+
+
+const funObj = {
+    async help() {
+        console.log('lllll')
+    },
+    async do() {
+        this.help()
+    }
+}
+
+funObj.do()
