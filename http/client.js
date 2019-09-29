@@ -1,9 +1,12 @@
 var http = require('http');
 var options = {
     hostname: 'localhost',
-    port: 1337,
+    port: 8000,
     path: '/',
-    method: 'GET'
+    method: 'POST',
+    body: {
+      ddd: 'kkk'
+    }
 };
 
 var req = http.request(options, function (res) {
