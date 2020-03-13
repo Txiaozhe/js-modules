@@ -1,6 +1,27 @@
 const vm = require('vm');
+const fs = require('fs');
+const path = require('path')
 
-const script = new vm.Script("console.log('hehe')")
-let sandbox = {window: ''};
+const script = new vm.Script(fs.readFileSync(path.join(__dirname, './driver.js')))
+
+let sandbox = {
+  say: 'hello world',
+  console: {
+    log: console.log
+  },
+  setInterval,
+  require,
+  process,
+  setImmediate,
+  Buffer,
+  callback: function(c) {
+    console.log('-=-=-= ', c)
+  }
+};
+
 let context = vm.createContext(sandbox);
-script.runInContext(context);
+const res = script.runInContext(context, {
+  displayErrors: true
+});
+
+console.log(res)
