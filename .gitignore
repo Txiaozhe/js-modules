@@ -71,3 +71,4 @@ stream/optimize/big.file
 package-lock.json
 
 build
+*.out

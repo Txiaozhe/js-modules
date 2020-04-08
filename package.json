@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "dependencies": {
     "@grpc/proto-loader": "^0.3.0",
+    "@tensorflow/tfjs": "^1.7.0",
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.2",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.2",
+    "commander": "^5.0.0",
     "dayjs": "^1.8.8",
     "decimal.js": "^10.1.1",
     "elasticsearch": "^13.3.1",

@@ -1,3 +1,3 @@
 const hello = require('./build/Release/hello');
 
-console.log(hello.say())
+console.log(hello.hello('kkk'))
