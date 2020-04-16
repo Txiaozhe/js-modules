@@ -14,6 +14,27 @@ function twoSum(nums, target) {
 	return [];
 }
 
+function twoSum2(nums, target) {
+  let i = 0, j = nums.length - 1
+  while (i < j) {
+    if (nums[i] + nums[j] > target) {
+      if (nums[i] > nums[j]) {
+        i++
+      } else {
+        j--
+      }
+    } else if(nums[i] + nums[j] < target) {
+      if (nums[i] > nums[j]) {
+        j--
+      } else {
+        i++
+      }
+    } else {
+      return [i, j]
+    }
+  }
+}
+
 describe('Test Two Sum', () => {
   it('Test 1', () => {
     assert.deepStrictEqual(twoSum([2, 7, 11, 15], 9), [0, 1]);
@@ -24,4 +45,12 @@ describe('Test Two Sum', () => {
   });
 });
 
-console.log(twoSum([2, 7, 11, 15], 9))
+describe('Test Two Sum2', () => {
+  it('Test 1', () => {
+    assert.deepStrictEqual(twoSum2([2, 7, 11, 15], 9), [0, 1]);
+  });
+
+  it('Test 2', () => {
+    assert.deepStrictEqual(twoSum2([2, 8, 6, 3], 14), [1, 2]);
+  });
+});
