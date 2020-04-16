@@ -43,6 +43,10 @@ describe('Test Two Sum', () => {
   it('Test 2', () => {
     assert.deepStrictEqual(twoSum([2, 8, 6, 3], 14), [1, 2]);
   });
+
+  it('Test 3', () => {
+    assert.deepStrictEqual(twoSum([3, 2, 4], 6), [1, 2]);
+  });
 });
 
 describe('Test Two Sum2', () => {
@@ -51,6 +55,6 @@ describe('Test Two Sum2', () => {
   });
 
   it('Test 2', () => {
-    assert.deepStrictEqual(twoSum2([2, 8, 6, 3], 14), [1, 2]);
+    assert.deepStrictEqual(twoSum2([3, 2, 4], 6), [1, 2]);
   });
 });
