@@ -24,3 +24,21 @@ setImmediate(() => {
 process.nextTick(() => {
   console.log('nexttick》》》》2')
 })
+
+const fs = require('fs')
+const path = require('path')
+
+fs.readFile(path.join(__dirname, './nextTick.js'), (err, data) => {
+  setImmediate(() => {
+    console.log('read imme')
+  })
+
+  setTimeout(() => {
+    console.log('read timer')
+  }, 0)
+  
+  console.log('===> readfile')
+  process.nextTick(() => {
+    console.log('nexttick》》》》3')
+  })
+})
