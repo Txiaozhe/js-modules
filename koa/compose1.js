@@ -51,3 +51,12 @@ function compose1(mws) {
     })
   }
 }
+
+function compose2(mws) {
+  let i = 0
+  return function _run(ctx) {
+    return mws[i](ctx, function () {
+      _run(ctx)
+    })
+  }
+}
